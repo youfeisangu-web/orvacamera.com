@@ -14,7 +14,7 @@
 
     <main>
       <h1>ORVA Camera Privacy Policy</h1>
-      <p class="meta">Effective date: September 12, 2026 / <a href="privacy.html">日本語</a></p>
+      <p class="meta">Effective date: September 14, 2026 / <a href="privacy.html">日本語</a></p>
 
       <p>Yuhi Mitani ("we", "us") sets out below how information is handled in the iOS / iPadOS app "ORVA Camera" (the "App").</p>
 
@@ -35,7 +35,9 @@
         <li>When you show a photo in a widget, the App and its widget extension use a shared on-device area (App Group) that holds a reduced-size thumbnail and summary values such as capture dates and daily counts. This shared area is not transmitted off the device either.</li>
         <li>Camera, microphone and photo library access are used only to capture, to record video with sound, and to import or save photos. You can change these permissions at any time in iOS Settings.</li>
         <li>Please take care before sharing photos that contain other people or embedded capture data such as location.</li>
-        <li>If a future version sends photos to an external AI service, we will update this policy before releasing it, state the recipient, the data sent and the purpose, and obtain your explicit consent.</li>
+        <li><strong>AI edit (optional feature)</strong>: only when you open "AI編集" (AI edit) on a library photo and tap "生成する" (Generate), that photo (downscaled to at most 1536 px on the long side) and the edit you selected (erase, atmosphere or expand, with the selected area or factor) are sent through our server (a relay function hosted on Supabase) to the image editing API of OpenAI, L.L.C. Before the first use the App shows what will be sent and asks for your explicit consent, which you can withdraw in the App at any time.</li>
+        <li>AI edit requires sign-in. Our server does not store your photos; it records only your account identifier, the time, the edit type and whether it succeeded, to manage the monthly allowance and prevent abuse. Results never overwrite the original and are saved to your photo library only when you choose to save them.</li>
+        <li>OpenAI does not use images sent to its API to train its models and retains them for up to 30 days for abuse monitoring before deletion (per OpenAI's API data usage policy).</li>
       </ul>
 
       <h2>4. Account information</h2>
@@ -67,12 +69,14 @@
         <li>Deleting your account does not automatically delete the photos and videos on your device. To remove them, delete them in the App or uninstall the App. Photos exported to your photo library must be deleted separately in the Photos app.</li>
         <li>On the same device, the same on-device photos are shown even if you sign in with a different account. Take care when sharing a device with others.</li>
         <li>To cancel a subscription, use Apple's subscription management. Account deletion does not cancel it.</li>
+        <li>AI edit usage records (account identifier, time, edit type, outcome) are kept for up to 13 months to manage allowances and then deleted. After account deletion, records tied to that identifier are deleted within a reasonable period.</li>
       </ul>
 
       <h2>8. Sharing with third parties</h2>
       <p>We do not sell your information. We do not share it with third parties except:</p>
       <ul>
         <li>to the extent necessary with Clerk, Apple and the sign-in provider you chose (Apple, Google), as described in sections 4 and 5;</li>
+        <li>for AI edit as described in section 3, at your request and with your consent, by sending the photo and edit selection through our hosting provider (Supabase Inc.) to OpenAI, L.L.C.;</li>
         <li>where required by law; or</li>
         <li>with your consent.</li>
       </ul>
